@@ -49,10 +49,10 @@ app.use('/api/document', documentRoutes);
 
 
 //static files
-app.use(express.static(path.resolve("./frontend/build")));
+app.use(express.static(path.join(__dirname, "./frontend/build")));
 
 app.get("*", function (req, res) {
-  res.sendFile(path.resolve("./index.html"));
+  res.sendFile(path.join(__dirname, "./frontend/build/index.html"));
 });
 
 app.listen(PORT,()=>{
