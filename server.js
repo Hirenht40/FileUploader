@@ -52,7 +52,7 @@ app.use('/api/document', documentRoutes);
 app.use(express.static(path.resolve("./frontend/build")));
 
 app.get("*", function (req, res) {
-  res.sendFile(path.resolve("./frontend/build/index.html"));
+  res.sendFile(path.resolve("./index.html"));
 });
 
 app.listen(PORT,()=>{
